@@ -4,14 +4,15 @@
 echo '**************************'
 echo 'Installing misc dependencies'
 echo '**************************'
+
 # install dependencies
 sudo apt-get update && sudo apt-get install systemd unzip wget build-essential go-lang -y
 
 echo '**************************'
 echo 'Installing XERO Node binary'
 echo '**************************'
-# Download node binary
 
+# Download node binary
 wget https://github.com/xero-official/go-xerom/releases/download/1.0.0/geth-linux-amd64
 
 # Make node executable
@@ -36,6 +37,7 @@ WantedBy=default.target
 EOL
         sudo systemctl stop xeronode
         sudo \mv /tmp/xeronode.service /etc/systemd/system
+        sudo \rm /usr/sbin/geth-linux-amd64
         sudo \mv geth-linux-amd64 /usr/sbin/
         sudo systemctl daemon-reload
         sudo systemctl enable xeronode && systemctl start xeronode
