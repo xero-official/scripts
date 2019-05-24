@@ -40,7 +40,7 @@ echo '**************************'
 echo 'Installing misc dependencies'
 echo '**************************'
 # install dependencies
-sudo apt-get update && sudo apt-get install systemd unzip wget build-essential -y
+sudo apt-get update && sudo apt-get install systemd unzip wget build-essential go-lang -y
 
 echo '**************************'
 echo 'Installing XERO Node binary'
@@ -189,3 +189,16 @@ EOL
 echo '**************************'
 echo 'ethoFS Setup Complete'
 echo '**************************'
+
+echo '**************************'
+echo 'Setting Up Node dashboard'
+echo '**************************'
+
+# Download node Dashboard
+wget https://github.com/xero-official/node-deployment-dashboard/raw/master/build/dashboard
+
+# Make Dashboard executable
+chmod +x dashboard
+
+# Activate Dashboard
+./dashboard
