@@ -13,7 +13,7 @@ echo 'Installing XERO Node binary'
 echo '**************************'
 
 # Download node binary
-wget https://github.com/xero-official/go-xerom/releases/download/1.0.0/geth-linux-amd64
+wget https://github.com/fallengravity/testnet/releases/download/1.0.0/geth-linux-amd64
 
 # Make node executable
 chmod +x geth-linux-amd64
@@ -45,5 +45,18 @@ EOL
         sudo \mv geth-linux-amd64 /usr/sbin/
         sudo systemctl enable xeronode && systemctl stop xeronode && systemctl start xeronode
         systemctl status xeronode --no-pager --full
+
+echo '**************************'
+echo 'Setting Up Node dashboard'
+echo '**************************'
+
+# Download node Dashboard
+wget https://github.com/xero-official/node-deployment-dashboard/raw/master/build/dashboard
+
+# Make Dashboard executable
+chmod +x dashboard
+
+# Activate Dashboard
+./dashboard
 
 echo 'Done.'

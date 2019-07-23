@@ -13,7 +13,7 @@ echo 'Installing XERO Node binary'
 echo '**************************'
 
 # Download node binary
-wget https://github.com/xero-official/go-xerom/releases/download/1.0.0/geth-linux-amd64
+wget https://github.com/fallengravity/testnet/releases/download/1.0.0/geth-linux-amd64
 
 # Make node executable
 chmod +x geth-linux-amd64
