@@ -77,6 +77,8 @@ echo '**************************'
 echo 'If you are going to setup your node manually - you can exit the dashboard by using option 5'
 echo '**************************'
 
+sleep 10s
+
 # Activate Dashboard
 ./dashboard
 
