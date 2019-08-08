@@ -85,7 +85,7 @@ wget https://github.com/xero-official/node-deployment-dashboard/raw/master/build
 # Make Dashboard executable
 chmod +x dashboard
 
-sleep 15s
+sleep 3s
 
 echo ''
 echo ''
