@@ -66,11 +66,12 @@ chmod +x dashboard
 sleep 15s
 
 echo '**************************'
-echo 'Printing your Node ID - Please save this somewhere you might need it - the script will pause for 1 minute to allow you to copy the Node ID, after 1 minute it will resume'
+echo 'Printing your Node ID - Please save this somewhere you might need it'
+echo '(note: The script will pause for 1 minute to allow you to copy the Node ID, after 1 minute it will resume.)'
 echo '**************************'
 
 #Grab the Node ID
-/usr/sbin/geth --exec "admin.nodeInfo.enode" attach ipc://./home/xero/.xerom/geth.ipc
+/usr/sbin/geth --exec "admin.nodeInfo.enode" attach ipc://./$HOME/.xerom/geth.ipc
 
 sleep 1m
 
