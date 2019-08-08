@@ -72,7 +72,7 @@ sudo systemctl status xerolinknode --no-pager --full
 
 echo ''
 echo ''
-echo ''echo '**************************'
+echo '**************************'
 echo 'Setting Up Node dashboard'
 echo '**************************'
 echo ''
