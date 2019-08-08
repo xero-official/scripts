@@ -75,7 +75,7 @@ echo ''
 echo ''
 echo '**************************'
 echo 'Setting Up Node dashboard'
-echo '**************************'echo ''
+echo '**************************'
 echo ''
 echo ''
 
