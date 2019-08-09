@@ -62,7 +62,7 @@ ExecStart=/usr/sbin/geth --syncmode full --lightserv 50 --lightpeers 75 -node --
 WantedBy=default.target
 EOL
 sudo systemctl stop xerolinknode
-sudo \mv /tmp/xeroclinknode.service /etc/systemd/system
+sudo \mv /tmp/xerolinknode.service /etc/systemd/system
 sudo \rm /usr/sbin/geth
 sudo \mv geth /usr/sbin/
 sudo systemctl daemon-reload
