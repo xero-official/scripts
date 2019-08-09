@@ -63,7 +63,7 @@ echo 'Printing your Nodes ID - Please save this somewhere you might need it - th
 echo '**************************'
 
 #Grab the Node ID
-/usr/sbin/geth --exec "admin.nodeInfo.enode" attach ipc://./home/xero/.xerom/geth.ipc
+/usr/sbin/geth --exec "admin.nodeInfo.enode" attach ipc://./$HOME/.xerom/geth.ipc
 
 sleep 1m
 
