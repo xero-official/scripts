@@ -48,7 +48,7 @@ echo ''
 echo ''
 echo ''
 
-cat > /tmp/xeronode.service << EOL
+cat > /tmp/xerom/xeronode.service << EOL
 [Unit]
 Description=XERO Node
 After=network.target
@@ -62,7 +62,7 @@ ExecStart=/usr/sbin/geth --syncmode=fast -node --cache=512 --datadir=$HOME/.xero
 WantedBy=default.target
 EOL
 sudo systemctl stop xeronode
-sudo \mv /tmp/xeronode.service /etc/systemd/system
+sudo \mv /tmp/xerom/xeronode.service /etc/systemd/system
 sudo \rm /usr/sbin/geth
 sudo \mv geth /usr/sbin/
 sudo systemctl daemon-reload

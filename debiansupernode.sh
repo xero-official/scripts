@@ -49,7 +49,7 @@ echo ''
 echo ''
 echo ''
 
-cat > /tmp/xerosupernode.service << EOL
+cat > /tmp/xerom/xerosupernode.service << EOL
 [Unit]
 Description=XERO Super Node
 After=network.target
@@ -63,7 +63,7 @@ ExecStart=/usr/sbin/geth --syncmode full --lightserv 80 --lightpeers 100 -node -
 WantedBy=default.target
 EOL
 sudo systemctl stop xerosupernode
-sudo \mv /tmp/xerosupernode.service /etc/systemd/system
+sudo \mv /tmp/xerom/xerosupernode.service /etc/systemd/system
 sudo \rm /usr/sbin/geth
 sudo \mv geth /usr/sbin/
 sudo systemctl daemon-reload

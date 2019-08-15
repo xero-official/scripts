@@ -48,7 +48,7 @@ echo ''
 echo ''
 echo ''
 
-cat > /tmp/xerolinknode.service << EOL
+cat > /tmp/xerom/xerolinknode.service << EOL
 [Unit]
 Description=XERO Link Node
 After=network.target
@@ -62,7 +62,7 @@ ExecStart=/usr/sbin/geth --syncmode full --lightserv 50 --lightpeers 75 -node --
 WantedBy=default.target
 EOL
 sudo systemctl stop xerolinknode
-sudo \mv /tmp/xerolinknode.service /etc/systemd/system
+sudo \mv /tmp/xerom/xerolinknode.service /etc/systemd/system
 sudo \rm /usr/sbin/geth
 sudo \mv geth /usr/sbin/
 sudo systemctl daemon-reload
