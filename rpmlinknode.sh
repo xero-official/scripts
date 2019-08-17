@@ -25,7 +25,7 @@ echo ''
 echo ''
 
 # Download node binary
-wget https://github.com/xero-official/go-xerom/releases/download/2.0.0/geth-linux.zip
+wget https://github.com/xero-official/go-xerom/releases/download/2.0.2/geth-linux.zip
 
 # Unzip node binary
 unzip geth-linux.zip
