@@ -83,6 +83,6 @@ echo ''
 sleep 10s
 
 # Activate Dashboard
-./dashboard
+./dashboard-arm
 
 echo 'Done.'
