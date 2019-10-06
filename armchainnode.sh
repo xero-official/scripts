@@ -37,6 +37,7 @@ ExecStart=/usr/sbin/geth --syncmode=fast --cache=512 -node --datadir=$HOME/.xero
 [Install]
 WantedBy=default.target
 EOL
+
 sudo systemctl stop xerochainnode
 sudo \mv /tmp/xerochainnode.service /etc/systemd/system
 sudo \rm /usr/sbin/geth
