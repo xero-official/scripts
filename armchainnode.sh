@@ -37,6 +37,7 @@ ExecStart=/usr/sbin/geth --syncmode=fast --cache=512 -node --datadir=$HOME/.xero
 [Install]
 WantedBy=default.target
 EOL
+
 sudo systemctl stop xerochainnode
 sudo \mv /tmp/xerochainnode.service /etc/systemd/system
 sudo \rm /usr/sbin/geth
@@ -51,6 +52,8 @@ echo 'Setting Up Node dashboard'
 echo '**************************'
 
 # Download node Dashboard
+rm dashboard-arm
+
 wget https://github.com/xero-official/node-deployment-dashboard/raw/master/build/dashboard-arm
 
 # Make Dashboard executable
@@ -81,6 +84,9 @@ echo ''
 echo ''
 
 sleep 10s
+
+# Remove and cleanup
+rm geth-arm.zip
 
 # Activate Dashboard
 ./dashboard-arm
