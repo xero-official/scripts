@@ -67,7 +67,7 @@ sudo \rm /usr/sbin/geth
 sudo \mv geth /usr/sbin/
 sudo systemctl daemon-reload
 sudo systemctl enable xeronode && systemctl start xeronode
-sudo systemctl restart xerochainnode
+sudo systemctl restart xeronode
 sudo systemctl status xeronode --no-pager --full
 
 echo ''
