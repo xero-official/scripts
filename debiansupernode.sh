@@ -32,7 +32,7 @@ rm -rf geth-linux.zip
 rm -rf dashboard
 
 # Download node binary
-wget https://github.com/xero-official/go-xerom/releases/download/2.0.2/geth-linux.zip
+wget https://github.com/xero-official/go-xerom/releases/download/2.1.0/geth-linux.zip
 
 unzip geth-linux.zip
 
